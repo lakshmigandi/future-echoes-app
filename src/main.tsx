@@ -23,7 +23,7 @@ const App: React.FC = () => {
   const API_KEY = 'sk_f539e12593fe8818b54345d8d1c15148bc008fd09ea8ec7f';
   // --- END WORKAROUND ---
 
-  const VOICE_ID = 'pNInz6obpgdqAKRxlnGw'; // Adam's voice ID 
+  const VOICE_ID = 'EXAVITQu4vr4xnSDxMaL'; // Sarah's Voice ID
   const MODEL_ID = 'eleven_monolingual_v1'; // Or 'eleven_multilingual_v2' for more languages
 
   // The useEffect to check API_KEY is now for the hardcoded key
