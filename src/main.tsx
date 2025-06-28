@@ -38,13 +38,12 @@ const App: React.FC = () => {
   }, [API_KEY]);
 
   // Function to speak the message using ElevenLabs API
-  const speakMessage = async (text: string) => {
-    // If API key is not available or is still the placeholder, set error and stop
-    if (!API_KEY || API_KEY === 'YOUR_ACTUAL_ELEVENLABS_API_KEY_STARTING_WITH_SK-HERE') {
-      setError("ElevenLabs API Key is not configured. Cannot speak message.");
-      console.error("ElevenLabs API Key is not configured. Cannot speak message.");
-      return;
-    }
+ // If API key is not available, set error and stop
+if (!API_KEY) { // Removed the specific placeholder check
+    setError("ElevenLabs API Key is not configured. Cannot speak message.");
+    console.error("ElevenLabs API Key is not configured. Cannot speak message.");
+    return;
+}
 
     // Prevent multiple concurrent speech requests
     if (isSpeaking) return;
